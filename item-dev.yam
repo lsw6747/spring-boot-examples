@@ -1,0 +1,19 @@
+server:
+  port: 9002
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@127.0.0.1:1521:xe
+    username: sys as sysdba
+    password: root
+  application:
+    name: item-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
